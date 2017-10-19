@@ -7,6 +7,11 @@ resource "aws_instance" "example1" {
   instance_type = "t2.micro"
 
   tags {
-  Name = "first instance man"
+  Name = "${var.instance_name}"
+ }
 }
+variable "instance_name" {
+  description= "Enter the name of the ec2 instance"
+  default= "wbserver"
 }
+
