@@ -6,8 +6,8 @@ resource "aws_instance" "example1" {
   ami           = "ami-40d28157"
   instance_type = "t2.micro"
 
-  tags {
-  Name = "${var.instance_name}"
+  tags = {
+    Name = "${var.instance_name}"
  }
 }
 variable "instance_name" {
